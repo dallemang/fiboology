@@ -1,384 +1,496 @@
-<?xml version="1.0"?>
-
-
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE rdf:RDF [
-    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
-    <!ENTITY swrl "http://www.w3.org/2003/11/swrl#" >
-    <!ENTITY swrlb "http://www.w3.org/2003/11/swrlb#" >
-    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
-    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
-    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
-    <!ENTITY fibo-der-ir-swap-rule "http://spec.edmcouncil.org/fibo/DER/RateDerivatives/IRSwapRules/" >
+	<!ENTITY fibo-der-ir-swap-rule "http://spec.edmcouncil.org/fibo/DER/RateDerivatives/IRSwapRules/">
+	<!ENTITY owl "http://www.w3.org/2002/07/owl#">
+	<!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+	<!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#">
+	<!ENTITY swrl "http://www.w3.org/2003/11/swrl#">
+	<!ENTITY swrlb "http://www.w3.org/2003/11/swrlb#">
+	<!ENTITY xsd "http://www.w3.org/2001/XMLSchema#">
 ]>
+<rdf:RDF
+	xmlns="http://spec.edmcouncil.org/fibo/DER/RateDerivatives/IRSwapRules/"
+	xmlns:fibo-der-ir-swap-rule="http://spec.edmcouncil.org/fibo/DER/RateDerivatives/IRSwapRules/"
+	xmlns:owl="http://www.w3.org/2002/07/owl#"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+	xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+	xml:space="preserve">
+	
+	<owl:Ontology
+		rdf:about="http://spec.edmcouncil.org/fibo/DER/RateDerivatives/IRSwapRules/">
+		<owl:imports
+			rdf:resource="http://spec.edmcouncil.org/fibo/DER/RateDerivatives/IRSwaps/"/>
+	</owl:Ontology>
+	
+	<swrl:Variable
+		rdf:about="urn:swrl#cur1">
+	</swrl:Variable>
+	
+	<swrl:Variable
+		rdf:about="urn:swrl#cur2">
+	</swrl:Variable>
+	
+	<swrl:Variable
+		rdf:about="urn:swrl#nsa1">
+	</swrl:Variable>
+	
+	<swrl:Variable
+		rdf:about="urn:swrl#nsa2">
+	</swrl:Variable>
+	
+	<swrl:Variable
+		rdf:about="urn:swrl#nss1">
+	</swrl:Variable>
+	
+	<swrl:Variable
+		rdf:about="urn:swrl#nss2">
+	</swrl:Variable>
+	
+	<swrl:Variable
+		rdf:about="urn:swrl#ss1">
+	</swrl:Variable>
+	
+	<swrl:Variable
+		rdf:about="urn:swrl#ss2">
+	</swrl:Variable>
+	
+	<swrl:Variable
+		rdf:about="urn:swrl#x">
+	</swrl:Variable>
+	
+	<swrl:AtomList
+		rdf:nodeID="blank01">
+		<rdf:first
+			rdf:nodeID="blank38"/>
+		<rdf:rest
+			rdf:nodeID="blank02"/>
+	</swrl:AtomList>
+	
+	<swrl:AtomList
+		rdf:nodeID="blank02">
+		<rdf:first
+			rdf:nodeID="blank40"/>
+		<rdf:rest
+			rdf:nodeID="blank03"/>
+	</swrl:AtomList>
+	
+	<swrl:AtomList
+		rdf:nodeID="blank03">
+		<rdf:first
+			rdf:nodeID="blank34"/>
+		<rdf:rest
+			rdf:nodeID="blank04"/>
+	</swrl:AtomList>
+	
+	<swrl:AtomList
+		rdf:nodeID="blank04">
+		<rdf:first
+			rdf:nodeID="blank36"/>
+		<rdf:rest
+			rdf:nodeID="blank05"/>
+	</swrl:AtomList>
+	
+	<swrl:AtomList
+		rdf:nodeID="blank05">
+		<rdf:first
+			rdf:nodeID="blank50"/>
+		<rdf:rest
+			rdf:nodeID="blank21"/>
+	</swrl:AtomList>
+	
+	<swrl:AtomList
+		rdf:nodeID="blank06">
+		<rdf:first
+			rdf:nodeID="blank25"/>
+		<rdf:rest
+			rdf:nodeID="blank14"/>
+	</swrl:AtomList>
+	
+	<swrl:AtomList
+		rdf:nodeID="blank07">
+		<rdf:first
+			rdf:nodeID="blank26"/>
+		<rdf:rest
+			rdf:nodeID="blank08"/>
+	</swrl:AtomList>
+	
+	<swrl:AtomList
+		rdf:nodeID="blank08">
+		<rdf:first
+			rdf:nodeID="blank47"/>
+		<rdf:rest
+			rdf:nodeID="blank09"/>
+	</swrl:AtomList>
+	
+	<swrl:AtomList
+		rdf:nodeID="blank09">
+		<rdf:first
+			rdf:nodeID="blank48"/>
+		<rdf:rest
+			rdf:nodeID="blank10"/>
+	</swrl:AtomList>
+	
+	<swrl:AtomList
+		rdf:nodeID="blank10">
+		<rdf:first
+			rdf:nodeID="blank43"/>
+		<rdf:rest
+			rdf:nodeID="blank11"/>
+	</swrl:AtomList>
+	
+	<swrl:AtomList
+		rdf:nodeID="blank11">
+		<rdf:first
+			rdf:nodeID="blank44"/>
+		<rdf:rest
+			rdf:nodeID="blank12"/>
+	</swrl:AtomList>
+	
+	<swrl:AtomList
+		rdf:nodeID="blank12">
+		<rdf:first
+			rdf:nodeID="blank39"/>
+		<rdf:rest
+			rdf:nodeID="blank13"/>
+	</swrl:AtomList>
+	
+	<swrl:AtomList
+		rdf:nodeID="blank13">
+		<rdf:first
+			rdf:nodeID="blank41"/>
+		<rdf:rest
+			rdf:nodeID="blank15"/>
+	</swrl:AtomList>
+	
+	<swrl:AtomList
+		rdf:nodeID="blank14">
+		<rdf:first
+			rdf:nodeID="blank46"/>
+		<rdf:rest
+			rdf:nodeID="blank18"/>
+	</swrl:AtomList>
+	
+	<swrl:AtomList
+		rdf:nodeID="blank15">
+		<rdf:first
+			rdf:nodeID="blank35"/>
+		<rdf:rest
+			rdf:nodeID="blank16"/>
+	</swrl:AtomList>
+	
+	<swrl:AtomList
+		rdf:nodeID="blank16">
+		<rdf:first
+			rdf:nodeID="blank37"/>
+		<rdf:rest
+			rdf:nodeID="blank17"/>
+	</swrl:AtomList>
+	
+	<swrl:AtomList
+		rdf:nodeID="blank17">
+		<rdf:first
+			rdf:nodeID="blank29"/>
+		<rdf:rest
+			rdf:nodeID="blank24"/>
+	</swrl:AtomList>
+	
+	<swrl:AtomList
+		rdf:nodeID="blank18">
+		<rdf:first
+			rdf:nodeID="blank49"/>
+		<rdf:rest
+			rdf:nodeID="blank19"/>
+	</swrl:AtomList>
+	
+	<swrl:AtomList
+		rdf:nodeID="blank19">
+		<rdf:first
+			rdf:nodeID="blank42"/>
+		<rdf:rest
+			rdf:nodeID="blank20"/>
+	</swrl:AtomList>
+	
+	<swrl:AtomList
+		rdf:nodeID="blank20">
+		<rdf:first
+			rdf:nodeID="blank45"/>
+		<rdf:rest
+			rdf:nodeID="blank01"/>
+	</swrl:AtomList>
+	
+	<swrl:AtomList
+		rdf:nodeID="blank21">
+		<rdf:first
+			rdf:nodeID="blank30"/>
+		<rdf:rest
+			rdf:resource="&rdf;nil"/>
+	</swrl:AtomList>
+	
+	<swrl:AtomList
+		rdf:nodeID="blank22">
+		<rdf:first
+			rdf:nodeID="blank28"/>
+		<rdf:rest
+			rdf:resource="&rdf;nil"/>
+	</swrl:AtomList>
+	
+	<swrl:AtomList
+		rdf:nodeID="blank23">
+		<rdf:first
+			rdf:nodeID="blank27"/>
+		<rdf:rest
+			rdf:resource="&rdf;nil"/>
+	</swrl:AtomList>
+	
+	<swrl:AtomList
+		rdf:nodeID="blank24">
+		<rdf:first
+			rdf:nodeID="blank31"/>
+		<rdf:rest
+			rdf:resource="&rdf;nil"/>
+	</swrl:AtomList>
+	
+	<swrl:ClassAtom
+		rdf:nodeID="blank25">
+		<swrl:argument1
+			rdf:resource="urn:swrl#x"/>
+		<swrl:classPredicate
+			rdf:resource="http://spec.edmcouncil.org/fibo/DER/DerivativesContracts/Swaps/SwapContract"/>
+	</swrl:ClassAtom>
+	
+	<swrl:ClassAtom
+		rdf:nodeID="blank26">
+		<swrl:argument1
+			rdf:resource="urn:swrl#x"/>
+		<swrl:classPredicate
+			rdf:resource="http://spec.edmcouncil.org/fibo/DER/DerivativesContracts/Swaps/SwapContract"/>
+	</swrl:ClassAtom>
+	
+	<swrl:ClassAtom
+		rdf:nodeID="blank27">
+		<swrl:argument1
+			rdf:resource="urn:swrl#x"/>
+		<swrl:classPredicate
+			rdf:resource="http://spec.edmcouncil.org/fibo/DER/RateDerivatives/IRSwaps/CrossCurrencyInterestRateSwapContract"/>
+	</swrl:ClassAtom>
+	
+	<swrl:ClassAtom
+		rdf:nodeID="blank28">
+		<swrl:argument1
+			rdf:resource="urn:swrl#x"/>
+		<swrl:classPredicate
+			rdf:resource="http://spec.edmcouncil.org/fibo/DER/RateDerivatives/IRSwaps/SingleCurrencyInterestRateSwapContract"/>
+	</swrl:ClassAtom>
+	
+	<swrl:DifferentIndividualsAtom
+		rdf:nodeID="blank29">
+		<swrl:argument1
+			rdf:resource="urn:swrl#cur1"/>
+		<swrl:argument2
+			rdf:resource="urn:swrl#cur2"/>
+	</swrl:DifferentIndividualsAtom>
+	
+	<swrl:DifferentIndividualsAtom
+		rdf:nodeID="blank30">
+		<swrl:argument1
+			rdf:resource="urn:swrl#ss1"/>
+		<swrl:argument2
+			rdf:resource="urn:swrl#ss2"/>
+	</swrl:DifferentIndividualsAtom>
+	
+	<swrl:DifferentIndividualsAtom
+		rdf:nodeID="blank31">
+		<swrl:argument1
+			rdf:resource="urn:swrl#ss1"/>
+		<swrl:argument2
+			rdf:resource="urn:swrl#ss2"/>
+	</swrl:DifferentIndividualsAtom>
+	
+	<swrl:Imp
+		rdf:nodeID="blank32">
+		<swrl:body
+			rdf:nodeID="blank06"/>
+		<swrl:head
+			rdf:nodeID="blank22"/>
+	</swrl:Imp>
+	
+	<swrl:Imp
+		rdf:nodeID="blank33">
+		<swrl:body
+			rdf:nodeID="blank07"/>
+		<swrl:head
+			rdf:nodeID="blank23"/>
+	</swrl:Imp>
+	
+	<swrl:IndividualPropertyAtom
+		rdf:nodeID="blank34">
+		<swrl:argument1
+			rdf:resource="urn:swrl#nsa1"/>
+		<swrl:argument2
+			rdf:resource="urn:swrl#cur1"/>
+		<swrl:propertyPredicate
+			rdf:resource="http://spec.edmcouncil.org/fibo/FND/Accounting/CurrencyAmount/hasBaseMoneyUnit"/>
+	</swrl:IndividualPropertyAtom>
+	
+	<swrl:IndividualPropertyAtom
+		rdf:nodeID="blank35">
+		<swrl:argument1
+			rdf:resource="urn:swrl#nsa1"/>
+		<swrl:argument2
+			rdf:resource="urn:swrl#cur1"/>
+		<swrl:propertyPredicate
+			rdf:resource="http://spec.edmcouncil.org/fibo/FND/Accounting/CurrencyAmount/hasBaseMoneyUnit"/>
+	</swrl:IndividualPropertyAtom>
+	
+	<swrl:IndividualPropertyAtom
+		rdf:nodeID="blank36">
+		<swrl:argument1
+			rdf:resource="urn:swrl#nsa2"/>
+		<swrl:argument2
+			rdf:resource="urn:swrl#cur2"/>
+		<swrl:propertyPredicate
+			rdf:resource="http://spec.edmcouncil.org/fibo/FND/Accounting/CurrencyAmount/hasBaseMoneyUnit"/>
+	</swrl:IndividualPropertyAtom>
+	
+	<swrl:IndividualPropertyAtom
+		rdf:nodeID="blank37">
+		<swrl:argument1
+			rdf:resource="urn:swrl#nsa2"/>
+		<swrl:argument2
+			rdf:resource="urn:swrl#cur2"/>
+		<swrl:propertyPredicate
+			rdf:resource="http://spec.edmcouncil.org/fibo/FND/Accounting/CurrencyAmount/hasBaseMoneyUnit"/>
+	</swrl:IndividualPropertyAtom>
+	
+	<swrl:IndividualPropertyAtom
+		rdf:nodeID="blank38">
+		<swrl:argument1
+			rdf:resource="urn:swrl#nss1"/>
+		<swrl:argument2
+			rdf:resource="urn:swrl#nsa1"/>
+		<swrl:propertyPredicate
+			rdf:resource="http://spec.edmcouncil.org/fibo/DER/RateDerivatives/IRSwaps/specifies"/>
+	</swrl:IndividualPropertyAtom>
+	
+	<swrl:IndividualPropertyAtom
+		rdf:nodeID="blank39">
+		<swrl:argument1
+			rdf:resource="urn:swrl#nss1"/>
+		<swrl:argument2
+			rdf:resource="urn:swrl#nsa1"/>
+		<swrl:propertyPredicate
+			rdf:resource="http://spec.edmcouncil.org/fibo/DER/RateDerivatives/IRSwaps/specifies"/>
+	</swrl:IndividualPropertyAtom>
+	
+	<swrl:IndividualPropertyAtom
+		rdf:nodeID="blank40">
+		<swrl:argument1
+			rdf:resource="urn:swrl#nss2"/>
+		<swrl:argument2
+			rdf:resource="urn:swrl#nsa2"/>
+		<swrl:propertyPredicate
+			rdf:resource="http://spec.edmcouncil.org/fibo/DER/RateDerivatives/IRSwaps/specifies"/>
+	</swrl:IndividualPropertyAtom>
+	
+	<swrl:IndividualPropertyAtom
+		rdf:nodeID="blank41">
+		<swrl:argument1
+			rdf:resource="urn:swrl#nss2"/>
+		<swrl:argument2
+			rdf:resource="urn:swrl#nsa2"/>
+		<swrl:propertyPredicate
+			rdf:resource="http://spec.edmcouncil.org/fibo/DER/RateDerivatives/IRSwaps/specifies"/>
+	</swrl:IndividualPropertyAtom>
+	
+	<swrl:IndividualPropertyAtom
+		rdf:nodeID="blank42">
+		<swrl:argument1
+			rdf:resource="urn:swrl#ss1"/>
+		<swrl:argument2
+			rdf:resource="urn:swrl#nss1"/>
+		<swrl:propertyPredicate
+			rdf:resource="http://spec.edmcouncil.org/fibo/DER/RateDerivatives/IRSwaps/hasNotionalStepSchedule"/>
+	</swrl:IndividualPropertyAtom>
+	
+	<swrl:IndividualPropertyAtom
+		rdf:nodeID="blank43">
+		<swrl:argument1
+			rdf:resource="urn:swrl#ss1"/>
+		<swrl:argument2
+			rdf:resource="urn:swrl#nss1"/>
+		<swrl:propertyPredicate
+			rdf:resource="http://spec.edmcouncil.org/fibo/DER/RateDerivatives/IRSwaps/hasNotionalStepSchedule"/>
+	</swrl:IndividualPropertyAtom>
+	
+	<swrl:IndividualPropertyAtom
+		rdf:nodeID="blank44">
+		<swrl:argument1
+			rdf:resource="urn:swrl#ss2"/>
+		<swrl:argument2
+			rdf:resource="urn:swrl#nss2"/>
+		<swrl:propertyPredicate
+			rdf:resource="http://spec.edmcouncil.org/fibo/DER/RateDerivatives/IRSwaps/hasNotionalStepSchedule"/>
+	</swrl:IndividualPropertyAtom>
+	
+	<swrl:IndividualPropertyAtom
+		rdf:nodeID="blank45">
+		<swrl:argument1
+			rdf:resource="urn:swrl#ss2"/>
+		<swrl:argument2
+			rdf:resource="urn:swrl#nss2"/>
+		<swrl:propertyPredicate
+			rdf:resource="http://spec.edmcouncil.org/fibo/DER/RateDerivatives/IRSwaps/hasNotionalStepSchedule"/>
+	</swrl:IndividualPropertyAtom>
+	
+	<swrl:IndividualPropertyAtom
+		rdf:nodeID="blank46">
+		<swrl:argument1
+			rdf:resource="urn:swrl#x"/>
+		<swrl:argument2
+			rdf:resource="urn:swrl#ss1"/>
+		<swrl:propertyPredicate
+			rdf:resource="http://spec.edmcouncil.org/fibo/DER/DerivativesContracts/Swaps/hasSwapStream"/>
+	</swrl:IndividualPropertyAtom>
+	
+	<swrl:IndividualPropertyAtom
+		rdf:nodeID="blank47">
+		<swrl:argument1
+			rdf:resource="urn:swrl#x"/>
+		<swrl:argument2
+			rdf:resource="urn:swrl#ss1"/>
+		<swrl:propertyPredicate
+			rdf:resource="http://spec.edmcouncil.org/fibo/DER/DerivativesContracts/Swaps/hasSwapStream"/>
+	</swrl:IndividualPropertyAtom>
+	
+	<swrl:IndividualPropertyAtom
+		rdf:nodeID="blank48">
+		<swrl:argument1
+			rdf:resource="urn:swrl#x"/>
+		<swrl:argument2
+			rdf:resource="urn:swrl#ss2"/>
+		<swrl:propertyPredicate
+			rdf:resource="http://spec.edmcouncil.org/fibo/DER/DerivativesContracts/Swaps/hasSwapStream"/>
+	</swrl:IndividualPropertyAtom>
+	
+	<swrl:IndividualPropertyAtom
+		rdf:nodeID="blank49">
+		<swrl:argument1
+			rdf:resource="urn:swrl#x"/>
+		<swrl:argument2
+			rdf:resource="urn:swrl#ss2"/>
+		<swrl:propertyPredicate
+			rdf:resource="http://spec.edmcouncil.org/fibo/DER/DerivativesContracts/Swaps/hasSwapStream"/>
+	</swrl:IndividualPropertyAtom>
+	
+	<swrl:SameIndividualAtom
+		rdf:nodeID="blank50">
+		<swrl:argument1
+			rdf:resource="urn:swrl#cur1"/>
+		<swrl:argument2
+			rdf:resource="urn:swrl#cur2"/>
+	</swrl:SameIndividualAtom>
 
-
-<rdf:RDF xmlns="http://spec.edmcouncil.org/fibo/DER/RateDerivatives/IRSwapRules/"
-     xml:base="http://spec.edmcouncil.org/fibo/DER/RateDerivatives/IRSwapRules/"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
-     xmlns:owl="http://www.w3.org/2002/07/owl#"
-     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:fibo-der-ir-swap-rule="http://spec.edmcouncil.org/fibo/DER/RateDerivatives/IRSwapRules/">
-    <owl:Ontology rdf:about="http://spec.edmcouncil.org/fibo/DER/RateDerivatives/IRSwapRules/">
-        <owl:imports rdf:resource="http://spec.edmcouncil.org/fibo/DER/RateDerivatives/IRSwaps/"/>
-    </owl:Ontology>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Rules
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    <rdf:Description rdf:about="urn:swrl#x">
-        <rdf:type rdf:resource="&swrl;Variable"/>
-    </rdf:Description>
-    <rdf:Description rdf:about="urn:swrl#ss1">
-        <rdf:type rdf:resource="&swrl;Variable"/>
-    </rdf:Description>
-    <rdf:Description rdf:about="urn:swrl#ss2">
-        <rdf:type rdf:resource="&swrl;Variable"/>
-    </rdf:Description>
-    <rdf:Description rdf:about="urn:swrl#nss1">
-        <rdf:type rdf:resource="&swrl;Variable"/>
-    </rdf:Description>
-    <rdf:Description rdf:about="urn:swrl#nss2">
-        <rdf:type rdf:resource="&swrl;Variable"/>
-    </rdf:Description>
-    <rdf:Description rdf:about="urn:swrl#nsa1">
-        <rdf:type rdf:resource="&swrl;Variable"/>
-    </rdf:Description>
-    <rdf:Description rdf:about="urn:swrl#nsa2">
-        <rdf:type rdf:resource="&swrl;Variable"/>
-    </rdf:Description>
-    <rdf:Description rdf:about="urn:swrl#cur1">
-        <rdf:type rdf:resource="&swrl;Variable"/>
-    </rdf:Description>
-    <rdf:Description rdf:about="urn:swrl#cur2">
-        <rdf:type rdf:resource="&swrl;Variable"/>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&swrl;Imp"/>
-        <swrl:body>
-            <rdf:Description>
-                <rdf:type rdf:resource="&swrl;AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="&swrl;ClassAtom"/>
-                        <swrl:classPredicate rdf:resource="http://spec.edmcouncil.org/fibo/DER/DerivativesContracts/Swaps/SwapContract"/>
-                        <swrl:argument1 rdf:resource="urn:swrl#x"/>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="&swrl;AtomList"/>
-                        <rdf:rest>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="&swrl;AtomList"/>
-                                <rdf:first>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                                        <swrl:propertyPredicate rdf:resource="http://spec.edmcouncil.org/fibo/DER/DerivativesContracts/Swaps/hasSwapStream"/>
-                                        <swrl:argument2 rdf:resource="urn:swrl#ss2"/>
-                                        <swrl:argument1 rdf:resource="urn:swrl#x"/>
-                                    </rdf:Description>
-                                </rdf:first>
-                                <rdf:rest>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="&swrl;AtomList"/>
-                                        <rdf:rest>
-                                            <rdf:Description>
-                                                <rdf:type rdf:resource="&swrl;AtomList"/>
-                                                <rdf:first>
-                                                    <rdf:Description>
-                                                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                                                        <swrl:propertyPredicate rdf:resource="http://spec.edmcouncil.org/fibo/DER/RateDerivatives/IRSwaps/hasNotionalStepSchedule"/>
-                                                        <swrl:argument2 rdf:resource="urn:swrl#nss2"/>
-                                                        <swrl:argument1 rdf:resource="urn:swrl#ss2"/>
-                                                    </rdf:Description>
-                                                </rdf:first>
-                                                <rdf:rest>
-                                                    <rdf:Description>
-                                                        <rdf:type rdf:resource="&swrl;AtomList"/>
-                                                        <rdf:first>
-                                                            <rdf:Description>
-                                                                <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                                                                <swrl:propertyPredicate rdf:resource="http://spec.edmcouncil.org/fibo/DER/RateDerivatives/IRSwaps/specifies"/>
-                                                                <swrl:argument2 rdf:resource="urn:swrl#nsa1"/>
-                                                                <swrl:argument1 rdf:resource="urn:swrl#nss1"/>
-                                                            </rdf:Description>
-                                                        </rdf:first>
-                                                        <rdf:rest>
-                                                            <rdf:Description>
-                                                                <rdf:type rdf:resource="&swrl;AtomList"/>
-                                                                <rdf:first>
-                                                                    <rdf:Description>
-                                                                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                                                                        <swrl:propertyPredicate rdf:resource="http://spec.edmcouncil.org/fibo/DER/RateDerivatives/IRSwaps/specifies"/>
-                                                                        <swrl:argument2 rdf:resource="urn:swrl#nsa2"/>
-                                                                        <swrl:argument1 rdf:resource="urn:swrl#nss2"/>
-                                                                    </rdf:Description>
-                                                                </rdf:first>
-                                                                <rdf:rest>
-                                                                    <rdf:Description>
-                                                                        <rdf:type rdf:resource="&swrl;AtomList"/>
-                                                                        <rdf:first>
-                                                                            <rdf:Description>
-                                                                                <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                                                                                <swrl:propertyPredicate rdf:resource="http://spec.edmcouncil.org/fibo/FND/Accounting/CurrencyAmount/hasBaseMoneyUnit"/>
-                                                                                <swrl:argument2 rdf:resource="urn:swrl#cur1"/>
-                                                                                <swrl:argument1 rdf:resource="urn:swrl#nsa1"/>
-                                                                            </rdf:Description>
-                                                                        </rdf:first>
-                                                                        <rdf:rest>
-                                                                            <rdf:Description>
-                                                                                <rdf:type rdf:resource="&swrl;AtomList"/>
-                                                                                <rdf:first>
-                                                                                    <rdf:Description>
-                                                                                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                                                                                        <swrl:propertyPredicate rdf:resource="http://spec.edmcouncil.org/fibo/FND/Accounting/CurrencyAmount/hasBaseMoneyUnit"/>
-                                                                                        <swrl:argument2 rdf:resource="urn:swrl#cur2"/>
-                                                                                        <swrl:argument1 rdf:resource="urn:swrl#nsa2"/>
-                                                                                    </rdf:Description>
-                                                                                </rdf:first>
-                                                                                <rdf:rest>
-                                                                                    <rdf:Description>
-                                                                                        <rdf:type rdf:resource="&swrl;AtomList"/>
-                                                                                        <rdf:first>
-                                                                                            <rdf:Description>
-                                                                                                <rdf:type rdf:resource="&swrl;SameIndividualAtom"/>
-                                                                                                <swrl:argument1 rdf:resource="urn:swrl#cur1"/>
-                                                                                                <swrl:argument2 rdf:resource="urn:swrl#cur2"/>
-                                                                                            </rdf:Description>
-                                                                                        </rdf:first>
-                                                                                        <rdf:rest>
-                                                                                            <rdf:Description>
-                                                                                                <rdf:type rdf:resource="&swrl;AtomList"/>
-                                                                                                <rdf:rest rdf:resource="&rdf;nil"/>
-                                                                                                <rdf:first>
-                                                                                                    <rdf:Description>
-                                                                                                        <rdf:type rdf:resource="&swrl;DifferentIndividualsAtom"/>
-                                                                                                        <swrl:argument1 rdf:resource="urn:swrl#ss1"/>
-                                                                                                        <swrl:argument2 rdf:resource="urn:swrl#ss2"/>
-                                                                                                    </rdf:Description>
-                                                                                                </rdf:first>
-                                                                                            </rdf:Description>
-                                                                                        </rdf:rest>
-                                                                                    </rdf:Description>
-                                                                                </rdf:rest>
-                                                                            </rdf:Description>
-                                                                        </rdf:rest>
-                                                                    </rdf:Description>
-                                                                </rdf:rest>
-                                                            </rdf:Description>
-                                                        </rdf:rest>
-                                                    </rdf:Description>
-                                                </rdf:rest>
-                                            </rdf:Description>
-                                        </rdf:rest>
-                                        <rdf:first>
-                                            <rdf:Description>
-                                                <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                                                <swrl:propertyPredicate rdf:resource="http://spec.edmcouncil.org/fibo/DER/RateDerivatives/IRSwaps/hasNotionalStepSchedule"/>
-                                                <swrl:argument2 rdf:resource="urn:swrl#nss1"/>
-                                                <swrl:argument1 rdf:resource="urn:swrl#ss1"/>
-                                            </rdf:Description>
-                                        </rdf:first>
-                                    </rdf:Description>
-                                </rdf:rest>
-                            </rdf:Description>
-                        </rdf:rest>
-                        <rdf:first>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                                <swrl:propertyPredicate rdf:resource="http://spec.edmcouncil.org/fibo/DER/DerivativesContracts/Swaps/hasSwapStream"/>
-                                <swrl:argument2 rdf:resource="urn:swrl#ss1"/>
-                                <swrl:argument1 rdf:resource="urn:swrl#x"/>
-                            </rdf:Description>
-                        </rdf:first>
-                    </rdf:Description>
-                </rdf:rest>
-            </rdf:Description>
-        </swrl:body>
-        <swrl:head>
-            <rdf:Description>
-                <rdf:type rdf:resource="&swrl;AtomList"/>
-                <rdf:rest rdf:resource="&rdf;nil"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="&swrl;ClassAtom"/>
-                        <swrl:classPredicate rdf:resource="http://spec.edmcouncil.org/fibo/DER/RateDerivatives/IRSwaps/SingleCurrencyInterestRateSwapContract"/>
-                        <swrl:argument1 rdf:resource="urn:swrl#x"/>
-                    </rdf:Description>
-                </rdf:first>
-            </rdf:Description>
-        </swrl:head>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&swrl;Imp"/>
-        <swrl:head>
-            <rdf:Description>
-                <rdf:type rdf:resource="&swrl;AtomList"/>
-                <rdf:rest rdf:resource="&rdf;nil"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="&swrl;ClassAtom"/>
-                        <swrl:classPredicate rdf:resource="http://spec.edmcouncil.org/fibo/DER/RateDerivatives/IRSwaps/CrossCurrencyInterestRateSwapContract"/>
-                        <swrl:argument1 rdf:resource="urn:swrl#x"/>
-                    </rdf:Description>
-                </rdf:first>
-            </rdf:Description>
-        </swrl:head>
-        <swrl:body>
-            <rdf:Description>
-                <rdf:type rdf:resource="&swrl;AtomList"/>
-                <rdf:rest>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="&swrl;AtomList"/>
-                        <rdf:first>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                                <swrl:propertyPredicate rdf:resource="http://spec.edmcouncil.org/fibo/DER/DerivativesContracts/Swaps/hasSwapStream"/>
-                                <swrl:argument2 rdf:resource="urn:swrl#ss1"/>
-                                <swrl:argument1 rdf:resource="urn:swrl#x"/>
-                            </rdf:Description>
-                        </rdf:first>
-                        <rdf:rest>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="&swrl;AtomList"/>
-                                <rdf:rest>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="&swrl;AtomList"/>
-                                        <rdf:first>
-                                            <rdf:Description>
-                                                <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                                                <swrl:propertyPredicate rdf:resource="http://spec.edmcouncil.org/fibo/DER/RateDerivatives/IRSwaps/hasNotionalStepSchedule"/>
-                                                <swrl:argument2 rdf:resource="urn:swrl#nss1"/>
-                                                <swrl:argument1 rdf:resource="urn:swrl#ss1"/>
-                                            </rdf:Description>
-                                        </rdf:first>
-                                        <rdf:rest>
-                                            <rdf:Description>
-                                                <rdf:type rdf:resource="&swrl;AtomList"/>
-                                                <rdf:first>
-                                                    <rdf:Description>
-                                                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                                                        <swrl:propertyPredicate rdf:resource="http://spec.edmcouncil.org/fibo/DER/RateDerivatives/IRSwaps/hasNotionalStepSchedule"/>
-                                                        <swrl:argument2 rdf:resource="urn:swrl#nss2"/>
-                                                        <swrl:argument1 rdf:resource="urn:swrl#ss2"/>
-                                                    </rdf:Description>
-                                                </rdf:first>
-                                                <rdf:rest>
-                                                    <rdf:Description>
-                                                        <rdf:type rdf:resource="&swrl;AtomList"/>
-                                                        <rdf:first>
-                                                            <rdf:Description>
-                                                                <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                                                                <swrl:propertyPredicate rdf:resource="http://spec.edmcouncil.org/fibo/DER/RateDerivatives/IRSwaps/specifies"/>
-                                                                <swrl:argument2 rdf:resource="urn:swrl#nsa1"/>
-                                                                <swrl:argument1 rdf:resource="urn:swrl#nss1"/>
-                                                            </rdf:Description>
-                                                        </rdf:first>
-                                                        <rdf:rest>
-                                                            <rdf:Description>
-                                                                <rdf:type rdf:resource="&swrl;AtomList"/>
-                                                                <rdf:first>
-                                                                    <rdf:Description>
-                                                                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                                                                        <swrl:propertyPredicate rdf:resource="http://spec.edmcouncil.org/fibo/DER/RateDerivatives/IRSwaps/specifies"/>
-                                                                        <swrl:argument2 rdf:resource="urn:swrl#nsa2"/>
-                                                                        <swrl:argument1 rdf:resource="urn:swrl#nss2"/>
-                                                                    </rdf:Description>
-                                                                </rdf:first>
-                                                                <rdf:rest>
-                                                                    <rdf:Description>
-                                                                        <rdf:type rdf:resource="&swrl;AtomList"/>
-                                                                        <rdf:first>
-                                                                            <rdf:Description>
-                                                                                <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                                                                                <swrl:propertyPredicate rdf:resource="http://spec.edmcouncil.org/fibo/FND/Accounting/CurrencyAmount/hasBaseMoneyUnit"/>
-                                                                                <swrl:argument2 rdf:resource="urn:swrl#cur1"/>
-                                                                                <swrl:argument1 rdf:resource="urn:swrl#nsa1"/>
-                                                                            </rdf:Description>
-                                                                        </rdf:first>
-                                                                        <rdf:rest>
-                                                                            <rdf:Description>
-                                                                                <rdf:type rdf:resource="&swrl;AtomList"/>
-                                                                                <rdf:rest>
-                                                                                    <rdf:Description>
-                                                                                        <rdf:type rdf:resource="&swrl;AtomList"/>
-                                                                                        <rdf:first>
-                                                                                            <rdf:Description>
-                                                                                                <rdf:type rdf:resource="&swrl;DifferentIndividualsAtom"/>
-                                                                                                <swrl:argument1 rdf:resource="urn:swrl#cur1"/>
-                                                                                                <swrl:argument2 rdf:resource="urn:swrl#cur2"/>
-                                                                                            </rdf:Description>
-                                                                                        </rdf:first>
-                                                                                        <rdf:rest>
-                                                                                            <rdf:Description>
-                                                                                                <rdf:type rdf:resource="&swrl;AtomList"/>
-                                                                                                <rdf:rest rdf:resource="&rdf;nil"/>
-                                                                                                <rdf:first>
-                                                                                                    <rdf:Description>
-                                                                                                        <rdf:type rdf:resource="&swrl;DifferentIndividualsAtom"/>
-                                                                                                        <swrl:argument1 rdf:resource="urn:swrl#ss1"/>
-                                                                                                        <swrl:argument2 rdf:resource="urn:swrl#ss2"/>
-                                                                                                    </rdf:Description>
-                                                                                                </rdf:first>
-                                                                                            </rdf:Description>
-                                                                                        </rdf:rest>
-                                                                                    </rdf:Description>
-                                                                                </rdf:rest>
-                                                                                <rdf:first>
-                                                                                    <rdf:Description>
-                                                                                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                                                                                        <swrl:propertyPredicate rdf:resource="http://spec.edmcouncil.org/fibo/FND/Accounting/CurrencyAmount/hasBaseMoneyUnit"/>
-                                                                                        <swrl:argument2 rdf:resource="urn:swrl#cur2"/>
-                                                                                        <swrl:argument1 rdf:resource="urn:swrl#nsa2"/>
-                                                                                    </rdf:Description>
-                                                                                </rdf:first>
-                                                                            </rdf:Description>
-                                                                        </rdf:rest>
-                                                                    </rdf:Description>
-                                                                </rdf:rest>
-                                                            </rdf:Description>
-                                                        </rdf:rest>
-                                                    </rdf:Description>
-                                                </rdf:rest>
-                                            </rdf:Description>
-                                        </rdf:rest>
-                                    </rdf:Description>
-                                </rdf:rest>
-                                <rdf:first>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                                        <swrl:propertyPredicate rdf:resource="http://spec.edmcouncil.org/fibo/DER/DerivativesContracts/Swaps/hasSwapStream"/>
-                                        <swrl:argument2 rdf:resource="urn:swrl#ss2"/>
-                                        <swrl:argument1 rdf:resource="urn:swrl#x"/>
-                                    </rdf:Description>
-                                </rdf:first>
-                            </rdf:Description>
-                        </rdf:rest>
-                    </rdf:Description>
-                </rdf:rest>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="&swrl;ClassAtom"/>
-                        <swrl:classPredicate rdf:resource="http://spec.edmcouncil.org/fibo/DER/DerivativesContracts/Swaps/SwapContract"/>
-                        <swrl:argument1 rdf:resource="urn:swrl#x"/>
-                    </rdf:Description>
-                </rdf:first>
-            </rdf:Description>
-        </swrl:body>
-    </rdf:Description>
 </rdf:RDF>
-
-
-
-<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
-
