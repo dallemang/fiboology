@@ -1,0 +1,72 @@
+diff --git a/be/LegalEntities/FormalBusinessOrganizations.rdf b/be/LegalEntities/FormalBusinessOrganizations.rdf
+index b1afd9b..ba9d37b 100644
+--- a/be/LegalEntities/FormalBusinessOrganizations.rdf
++++ b/be/LegalEntities/FormalBusinessOrganizations.rdf
+@@ -176,7 +176,7 @@ Copyright (c) 2013-2015 Object Management Group, Inc.</sm:copyright>
+ 
+     <owl:ObjectProperty rdf:about="&fibo-be-le-fbo;hasSignatory">
+         <rdfs:domain rdf:resource="&fibo-be-le-fbo;FormallyConstitutedOrganization"/>
+-        <rdfs:range rdf:resource="&fibo-be-le-lp;LegalEntityOrNaturalPerson"/>
++        <rdfs:range rdf:resource="&fibo-be-le-lp;Signatory"/>
+         <rdfs:subPropertyOf rdf:resource="&fibo-fnd-pty-pty;hasPartyInRole"/>
+     </owl:ObjectProperty>
+     
+@@ -394,9 +394,9 @@ Copyright (c) 2013-2015 Object Management Group, Inc.</sm:copyright>
+     
+ 
+ 
+-    <!-- http://spec.edmcouncil.org/fibo/BE/LegalEntities/LegalPersons/LegalEntityOrNaturalPerson -->
++    <!-- http://spec.edmcouncil.org/fibo/BE/LegalEntities/LegalPersons/Signatory -->
+ 
+-    <owl:Class rdf:about="&fibo-be-le-lp;LegalEntityOrNaturalPerson"/>
++    <owl:Class rdf:about="&fibo-be-le-lp;Signatory"/>
+     
+ 
+ 
+@@ -452,10 +452,10 @@ Copyright (c) 2013-2015 Object Management Group, Inc.</sm:copyright>
+ 
+     <owl:Class rdf:about="&fibo-fnd-rel-rel;Reference"/>
+     <rdf:Description>
+-        <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
++        <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minQualifiedCardinality>
+     </rdf:Description>
+     <rdf:Description>
+-        <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minQualifiedCardinality>
++        <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
+     </rdf:Description>
+     <rdf:Description>
+         <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
+@@ -471,25 +471,25 @@ Copyright (c) 2013-2015 Object Management Group, Inc.</sm:copyright>
+     ///////////////////////////////////////////////////////////////////////////////////////
+      -->
+ 
++    <rdf:Description rdf:about="&fibo-be-le-fbo;RegisteredAddress">
++        <rdfs:label>registered address</rdfs:label>
++        <skos:definition rdf:datatype="&xsd;string">The address at which an entity is registered and at which legal papers may be served.</skos:definition>
++        <skos:editorialNote rdf:datatype="&xsd;string">This usually has to not be a postal address (except in some jurisdictions). So there should be a common superclass.</skos:editorialNote>
++    </rdf:Description>
+     <rdf:Description rdf:about="&fibo-be-le-fbo;Branch">
+         <rdfs:label>branch</rdfs:label>
+         <skos:definition rdf:datatype="&xsd;string">A part of a business organization or company, identified as a branch.</skos:definition>
+         <skos:editorialNote rdf:datatype="&xsd;string">This is not a separate legal entity in its own right, but a functional part of the entity.</skos:editorialNote>
+     </rdf:Description>
+-    <rdf:Description rdf:about="&fibo-be-le-fbo;RegisteredAddress">
+-        <rdfs:label>registered address</rdfs:label>
+-        <skos:definition rdf:datatype="&xsd;string">The address at which an entity is registered and at which legal papers may be served.</skos:definition>
+-        <skos:editorialNote rdf:datatype="&xsd;string">This usually has to not be a postal address (except in some jurisdictions). So there should be a common superclass.</skos:editorialNote>
++    <rdf:Description rdf:about="&fibo-be-le-fbo;hasSignatory">
++        <rdfs:label>has signatory</rdfs:label>
++        <skos:definition rdf:datatype="&xsd;string">has a party which is authorized to sign contracts on behalf of the entity</skos:definition>
+     </rdf:Description>
+     <rdf:Description rdf:about="&fibo-be-le-fbo;OrganizationCoveringAgreement">
+         <rdfs:label>organization covering agreement</rdfs:label>
+         <skos:definition rdf:datatype="&xsd;string">A formal agreement between the principals in a formal organization which covers the relationship between the principals, and between the principals and the entity.</skos:definition>
+         <skos:editorialNote rdf:datatype="&xsd;string">Also covers the aims and purposes of the Entity.</skos:editorialNote>
+     </rdf:Description>
+-    <rdf:Description rdf:about="&fibo-be-le-fbo;hasSignatory">
+-        <rdfs:label>has signatory</rdfs:label>
+-        <skos:definition rdf:datatype="&xsd;string">has a party which is authorized to sign contracts on behalf of the entity</skos:definition>
+-    </rdf:Description>
+     <rdf:Description rdf:about="&fibo-be-le-fbo;FormallyConstitutedOrganization">
+         <rdfs:label>formally constituted organization</rdfs:label>
+         <skos:definition rdf:datatype="&xsd;string">Any organization with some formal contractual agreement among its principals</skos:definition>

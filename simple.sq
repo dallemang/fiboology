@@ -1,0 +1,56 @@
+PREFIX afn: <http://jena.hpl.hp.com/ARQ/function#>
+prefix fibo-fnd-org-fm: <http://spec.edmcouncil.org/fibo/FND/Organizations/FormalOrganizations/>
+prefix fibo-fnd-plc-adr: <http://spec.edmcouncil.org/fibo/FND/Places/Addresses/>
+prefix fibo-fnd-rel-rel: <http://spec.edmcouncil.org/fibo/FND/Relations/Relations/>
+prefix owl:   <http://www.w3.org/2002/07/owl#>
+prefix fibo-fnd-acc-cur: <http://spec.edmcouncil.org/fibo/FND/Accounting/CurrencyAmount/>
+prefix xsd:   <http://www.w3.org/2001/XMLSchema#>
+prefix skos:  <http://www.w3.org/2004/02/skos/core#>
+prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
+prefix fibo-be-le-fbo: <http://spec.edmcouncil.org/fibo/BE/LegalEntities/FormalBusinessOrganizations/>
+prefix fibo-fnd-aap-ppl: <http://spec.edmcouncil.org/fibo/FND/AgentsAndPeople/People/>
+prefix fibo-fnd-plc-cty: <http://spec.edmcouncil.org/fibo/FND/Places/Countries/>
+prefix fibo-fnd-acc-aeq: <http://spec.edmcouncil.org/fibo/FND/Accounting/AccountingEquity/>
+prefix dct:   <http://purl.org/dc/terms/>
+prefix fibo-fnd-pty-rl: <http://spec.edmcouncil.org/fibo/FND/Parties/Roles/>
+prefix fibo-fnd-pty-pty: <http://spec.edmcouncil.org/fibo/FND/Parties/Parties/>
+prefix fibo-fnd-utl-av: <http://spec.edmcouncil.org/fibo/FND/Utilities/AnnotationVocabulary/>
+prefix sm:    <http://www.omg.org/techprocess/ab/SpecificationMetadata/>
+prefix fibo-fnd-agr-ctr: <http://spec.edmcouncil.org/fibo/FND/Agreements/Contracts/>
+prefix fibo-be-le-lp: <http://spec.edmcouncil.org/fibo/BE/LegalEntities/LegalPersons/>
+prefix fibo-fnd-org-org: <http://spec.edmcouncil.org/fibo/FND/Organizations/Organizations/>
+prefix fibo-fnd-gao-gl: <http://spec.edmcouncil.org/fibo/FND/GoalsAndObjectives/Goals/>
+prefix fibo-fnd-aap-agt: <http://spec.edmcouncil.org/fibo/FND/AgentsAndPeople/Agents/>
+prefix fibo-fnd-law-lca: <http://spec.edmcouncil.org/fibo/FND/Law/LegalCapacity/>
+prefix fibo-fnd-oac-own: <http://spec.edmcouncil.org/fibo/FND/OwnershipAndControl/Ownership/>
+prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+prefix fibo-fnd-agr-agr: <http://spec.edmcouncil.org/fibo/FND/Agreements/Agreements/>
+prefix fibo-be-le-cb: <http://spec.edmcouncil.org/fibo/BE/LegalEntities/CorporateBodies/>
+prefix fibo-fnd-plc-loc: <http://spec.edmcouncil.org/fibo/FND/Places/Locations/>
+prefix fibo-fnd-law-jur: <http://spec.edmcouncil.org/fibo/FND/Law/Jurisdiction/>
+prefix fibo-fnd-utl-bt: <http://spec.edmcouncil.org/fibo/FND/Utilities/BusinessFacingTypes/>
+prefix fibo-fnd-law-cor: <http://spec.edmcouncil.org/fibo/FND/Law/LegalCore/>
+prefix fibo-be-corp-corp: <http://spec.edmcouncil.org/fibo/BE/Corporations/Corporations/>
+prefix xsd: <http://www.w3.org/2001/XMLSchema#> 
+prefix owl: <http://www.w3.org/2002/07/owl#> 
+SELECT ?s ?newp ?o ?SEQ
+ WHERE {?s ?p ?o .
+        OPTIONAL {?source ?ppp ?s }
+	BIND (IF (ISIRI (?o), afn:localname(?o), "B") AS ?sc1)
+        OPTIONAL {?o owl:onProperty ?op}
+	BIND (IF ((BOUND (?op) && ISIRI (?op)), concat (?sc1, afn:localname (?op)), ?sc1) AS ?sc2)
+        OPTIONAL {?o (owl:someValuesFrom | owl:allValuesFrom) / owl:onProperty ?op2}
+	BIND (IF ((BOUND (?op2) && ISIRI (?op2)), concat (?sc2, afn:localname (?op2)), ?sc2) AS ?sc3)
+        OPTIONAL {?o (owl:someValuesFrom | owl:allValuesFrom) / owl:onClass ?op3}
+	BIND (IF ((BOUND (?op3) && ISIRI (?op3)), concat (?sc3, afn:localname (?op3)), ?sc3) AS ?sc4)
+	BIND (IF ((?p=rdfs:subClassOf), IRI(concat ("http://www.w3.org/2000/01/rdf-schema#subClassOf", "-XXXX", ?sc4, "XXXX")), ?p)    as ?newp)
+        BIND (IF ((ISIRI (?s) && (?newp = rdf:type)), xsd:string (?s), "Z") AS ?SEQ)
+	}
+ORDER BY DESC(?SEQ)
+#(IF ((ISIRI (?s) && (?newp = rdf:type)), xsd:string (?s), "Z"))
+         DESC (IF ((bound (?source) && !(isblank(?s))), xsd:string (?s), "A"))
+         DESC (xsd:string (?newp))
+         DESC (IF(isBLANK (?s),xsd:string (?sp), xsd:string(?s)))
+         DESC (IF(isBLANK(?o), xsd:string (?op), xsd:string(?o)))
+
+

@@ -1,0 +1,72 @@
+chartered legal person
+	A kind of juridical person.
+
+		
+	a legal person created by a royal charter or decree
+
+
+
+juridical person
+	A kind of legal entity and formal organization.
+
+		
+	an entity, as a firm, that is not a single natural person, as a human being, authorized by law with duties and rights, recognized as a legal authority having a distinct identity, a legal personality
+
+
+
+legal entity
+	A kind of autonomous agent. A valid instance satisfies the following necessary condition(s):
+	
+		is incorporated in 0..* instances of jurisdiction
+		is organized in 0..* instances of jurisdiction
+		unnamed1 0..* instances of 
+
+		
+	a partnership, corporation, or other organization having the capacity to negotiate contracts, assume financial obligations, and pay off debts, organized under the laws of some jurisdiction
+
+
+
+legal entity or natural person
+	A kind of autonomous agent. A valid instance satisfies the following necessary condition(s):
+	
+		designates signatory 0..* instances of legal entity or natural person
+		is organized in 0..* instances of jurisdiction
+		is recognized in 0..* instances of jurisdiction
+
+		
+	union of legal entity and natural person
+
+
+
+natural person
+	A kind of autonomous agent.
+
+		
+	A person of maturity who in the eyes of the law is able to assume obligations.
+
+
+
+power of attorney
+	A kind of legal capacity.
+
+		
+	Written legal authority given by one party (the principal) to another (the agent or attorney-in-fact) to act on the principals behalf. It may be a (1) General power Of attorney that authorizes the agent to act generally on behalf of the principal, or (2) Special power of attorney that is limited to a specific act or situation. Decisions made and actions taken by an attorney in fact (within the scope of his or her authority) are legally binding on the principal. A power of attorney can remain in force only so long as the principal is alive and does not become disabled or incapacitated. Although it is often conferred on the principals attorney, one does not need to be an attorney at law to be an attorney-in-fact.
+
+
+
+signatory
+	A kind of party in role.
+
+		
+	Some agent who has the capacity to sign contracts on the part of some legal person
+
+
+
+statutory body
+	A kind of juridical person.
+
+		
+	a body set up by a government to consider evidence and make judgements in some field of activity
+
+
+

@@ -1,0 +1,19 @@
+PREFIX afn: <http://jena.hpl.hp.com/ARQ/function#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+prefix skos: <http://www.w3.org/2004/02/skos/core#> 
+CONSTRUCT {?s ?p ?o}
+WHERE {?s ?p ?o .
+ BIND (afn:namespace (?p) AS ?nsp)
+ BIND (afn:namespace (?s) AS ?nss)
+ BIND (afn:namespace (?o) AS ?nso)
+
+FILTER  ((?p != rdfs:range) || NOT EXISTS {?s a owl:AnnotationProperty . })
+FILTER  ((?p != rdfs:domain) || NOT EXISTS {?s a owl:AnnotationProperty . })
+ FILTER (?nsp != "http://www.omg.org/techprocess/ab/SpecificationMetadata/" )
+# FILTER (?nss != "http://www.omg.org/techprocess/ab/SpecificationMetadata/" )
+# FILTER (?nso != "http://www.omg.org/techprocess/ab/SpecificationMetadata/" )
+ FILTER NOT EXISTS {?s a <http://www.w3.org/2002/07/owl#Ontology>}
+
+}
