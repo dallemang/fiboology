@@ -132,6 +132,7 @@ Whether or not you restrict your view of agents to the software variety, most ag
 
 (1) Autonomous - an agent is capable of acting without direct external intervention.  Agents have some degree of control over their internal state and can act based on their own experiences. They can also possess their own set of internal responsibilities and processing that enable them to act without any external choreography.  When an agent acts on behalf of (or as a proxy for) some person or thing, its autonomy is expected to embody the goals and policies of the entity that it represents.
 
+
 (2) Interactive - an agent communicates with the environment and other agents. Agents are interactive entities because they are capable of exchanging rich forms of messages with other entities in their environment.  These messages can support requests for services and other kinds of resources, as well as event detection and notification.  They can be synchronous or asynchronous in nature.  The interaction can also be conversational in nature, such as negotiating contracts, marketplace-style bidding, or simply making a query.
 
 (3) Adaptive - an agent is capable of responding to other agents and/or its environment. Agents can react to messages and events and then respond appropriately.  Agents can be designed to make difficult decisions and even modify their behavior based on their experiences.  They can learn and evolve.</fibo-fnd-utl-av:explanatoryNote>
